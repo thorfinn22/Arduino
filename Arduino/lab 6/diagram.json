@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": -7.37, "left": -16.06, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -118.57,
+      "left": 152.49,
+      "attrs": { "color": "green" }
+    },
+    { "type": "board-ssd1306", "id": "oled1", "top": 212, "left": 147.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "btn1:1.l", "mega:GND.1", "green", [ "h0" ] ],
+    [ "btn1:2.r", "mega:4", "green", [ "h0" ] ],
+    [ "oled1:VCC", "mega:5V", "red", [ "v0" ] ],
+    [ "oled1:GND", "mega:GND.1", "black", [ "v0" ] ],
+    [ "oled1:SCL", "mega:SCL", "green", [ "v0" ] ],
+    [ "oled1:SDA", "mega:SDA", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 62.94, "left": 3.74, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -82.64,
+      "left": 75.33,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -109.26, "left": 212.42, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -4.92,
+      "left": 3.23,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "mega:GND.2", "r1:1", "black", [ "v38.62", "h-170.38" ] ],
+    [ "r1:2", "pot1:GND", "green", [ "v0.54", "h188" ] ],
+    [ "pot1:SIG", "mega:A0", "green", [ "v0" ] ],
+    [ "pot1:VCC", "mega:5V", "red", [ "v0" ] ],
+    [ "led1:C", "mega:GND.1", "green", [ "v0" ] ],
+    [ "led1:A", "mega:2", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
